@@ -1,0 +1,134 @@
+body {
+	/*padding: 50px;*/
+}
+
+ul.pills{
+	margin-bottom: 0px;
+}
+
+div.container > h1 {
+	margin: 15px 0 30px 0;
+}
+
+div.form-container {
+	margin:  25px 0;
+}
+
+div.list-container {
+	margin:  25px 0;
+}
+
+.alert-message {
+	font-weight: bold !important;
+}
+
+li > span {
+	width: 250px;
+	display: inline-block;
+}
+
+li > button {
+	margin-left: 35px;
+}
+
+li > a {
+	cursor: pointer;
+}
+
+h3 { font-family: 'Grand Hotel', Helvetica, Arial; }
+body { font-family: 'ABeeZee', Helvetica, Arial; }
+
+.navbar-brand { font-family: 'Grand Hotel', Helvetica; font-size: 30px !important; }
+.navbar-custom {
+	background-color:#21906D;
+    color:#ffffff;
+  	border-radius:0;
+    margin-bottom: 0px;
+}
+  
+.navbar-custom .navbar-nav > li > a {
+  	color:#fff;
+  	padding-left:20px;
+  	padding-right:20px;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+	background-color:transparent;
+}
+      
+.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #0B5E42;
+}
+      
+.navbar-custom .navbar-brand {
+  	color:#eeeeee;
+}
+.navbar-custom .navbar-toggle {
+  	background-color:#eeeeee;
+}
+.nav .caret{ 
+    border-top-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;}
+.nav a:hover .caret{ 
+    border-top-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {background-color: #0B5E42;}
+.btn-group {
+    margin-top: -34px;
+    margin-right: 10px; }
+#top-page-bar { margin-top: -20px;}
+/*Initialize*/
+ul#menu, ul#menu ul.sub-menu {
+    padding:0;
+    margin: 10px 0px -8px 2px;
+}
+ul#menu li, ul#menu ul.sub-menu li {
+    list-style-type: none;
+    display: inline-block;
+}
+/*Link Appearance*/
+ul#menu li a, ul#menu li ul.sub-menu li a {
+    text-decoration: none;
+    color: #fff;
+    background: #21906D;
+    padding: 10px;
+    display:inline-block; 
+}
+ul#menu li ul.sub-menu li a:hover {
+    background:#D86A32;
+}
+/*Make the parent of sub-menu relative*/
+ul#menu li {
+    position: relative;
+}
+/*sub menu*/
+ul#menu li ul.sub-menu {
+    display:none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100px;
+}
+ul#menu li a.navbar-brand{ background-color: #21906D; margin-top: -6px;}
+ul#menu li ul.sub-menu {
+    display:block;
+}
+ul#menu li ul.sub-menu {
+    display: none;
+}
+
+ul#menu li ul.visible {
+    display: block;
+}
+.btn-success {
+  background-color: #D86A32;
+  border-color:#D86A32;
+}
+.btn-success:hover, .btn-success:active, .btn-success:focus {
+  background-color: #2E6C58;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:active {
+  background-color: #295A8D;
+}
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success { background-color: #2E6C58; }

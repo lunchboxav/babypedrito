@@ -1,0 +1,115 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+  <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" />
+	<title>Baby Pedrito - Visual for Baby</title>
+  <link rel="shortcut icon" href="http://www.adityo.net/babypedrito/favicon.ico">
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" type="text/css" rel="stylesheet">
+	<link href="assets/css/styles.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
+	<script src="jquery.min.js" ></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js" type='text/javascript' ></script>
+	<script src="assets/js/underscore-min.js"></script>
+	<script src="assets/js/backbone-min.js"></script>
+	<script src="assets/js/application.js"></script>
+	<script src="assets/js/processing-1.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(init);
+
+		function init() {
+      $('.parent').click(function() {
+        $('.sub-menu').toggleClass('visible');
+      });
+		}
+		var ProcessingInit = function() {
+		  function resizeWindow() {
+		    var pCanvas = Processing.getInstanceById('pCanvas');
+		    //pCanvas.resize($(window).width(),$(window).height());
+        pCanvas.resize(window.innerWidth, window.innerHeight);
+		  }
+		  
+		  $(window).resize(resizeWindow);
+		  resizeWindow();
+		}
+	</script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-custom navbar-static-top">
+  <div>
+    <ul id ="menu">
+    <li class="parent"> <a class="navbar-brand">Baby Pedrito</a>
+        <ul class="sub-menu">
+          <li class="howto-pill"><a>How To Use</a></li>
+          <li class="about-pill"><a>About</a></li>
+          <li class="feedback-pill"><a>Feedback</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div class="btn-group pull-right">
+    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Choose Visual <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li class="home-pill"><a>Stripes</a></li>
+      <li class="sunrise-pill"><a>Sunrise</a></li>
+      <li class="smile-pill"><a>Smile</a></li>
+      <li class="circle-pill"><a>Circle</a></li>
+      <li class="star-pill"><a>Star</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="home-page" class="pages">
+	<canvas id="pCanvas" data-processing-sources="stripe.pde"></canvas>
+</div>
+<div id="sunrise-page" class="pages">
+	<canvas id="pCanvas" data-processing-sources="sunrise.pde"></canvas>
+</div>
+<div id="smile-page" class="pages">
+	<canvas id="pCanvas" data-processing-sources="smile.pde"></canvas>
+</div>
+<div id="circle-page" class="pages">
+  <canvas id="pCanvas" data-processing-sources="red.pde"></canvas>
+</div>
+<div id="star-page" class="pages">
+  <canvas id="pCanvas" data-processing-sources="star.pde"></canvas>
+</div>
+<div id="about-page" class="col-xs-12 col-sm-12 col-md-10 col-lg-10 pages">
+  <div id="howto-content">
+    <h3>Hi, Welcome to Baby Pedrito</h3>
+    <p> Your newborn baby, probably until 3 months, can only see images with high contrast. However, you don't have to wait until that long to start train your baby to see, recognizing object, and thus, stimulating the baby's brain.</p>
+    <p> This app intends to provide parents with visuals of still and moving images that can be used to stimulate the baby's eyes and brains. All you have to do is to choose which image you like to see, and that's it. Free of charge, of course. A newborn up to 3 months can only distinguish high contrast image. That's why I only provide black and white images, with occassional yellow or red.</p>
+    <p>Baby Pedrito is developed by me, Adityo Pratomo <a href="http://www.twitter.com/kotakmakan"> (@kotakmakan) </a> an Indonesia-based interaction designer, researcher and lecturerand also a father of a one-month old baby boy. <p>
+    <p>The visuals are made using Processing JS, while Backbone JS is used to provide a smooth, app like experience and finally, Bootstrap is utilized to handle responsive side of things and UI components.</p>
+  </div>
+</div>
+<div id="howto-page" class="col-xs-12 col-sm-12 col-md-10 col-lg-10 pages">
+  <div id="howto-content">
+    <h3>Here's How To Use Baby Pedrito</h3>
+    <p> This web app contains visuals to stimulate your baby's eyes and brains. You can show it to your baby and see how the baby's reactions. </p>
+    <p> To start using Baby Pedrito, click on the top right button to choose which visual you like to see. As of now, you can choose from 5 different images. More contents are coming, I promise :) </p>
+    <p> This web app is optimized for mobile use, so I suggest that you visit it using your tablet/smartphone. Plus, it's way easier to show the images to your baby this way, rather than waving your laptop (it's dangerous, don't try it)</p>
+    <p> If you have questions or feedback, you can use the feedback page that you can access by clicking the top left logo and choose the Feedback menu. You can also read more about this app through the About menu</p>
+    <p> So, thank you for using Baby Pedrito </p>
+  </div>
+</div>
+<div id="feedback-page" class="col-xs-12 col-sm-12 col-md-10 col-lg-10 pages">
+  <div id="howto-content">
+    <h3>Got Questions?</h3>
+    <p>You can contact me via email <a href="mailto:pratomo.adityo@gmail.com"> pratomo.adityo@gmailcom </a> or, use Twitter, <a href="http://www.twitter.com/kotakmakan">@kotakmakan</a> (hint: I'm way easier to reach via Twitter)</p>
+    <p>Cheers! :)</p>
+  </div>
+</div>
+</body>
+</html>
